@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+form textarea,
+form input {
+  padding: 1.5rem;
+  border: 2px solid var(--color-water-10);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-family: monospace;
+}
+
+form label {
+  margin-bottom: 0.25rem;
+}

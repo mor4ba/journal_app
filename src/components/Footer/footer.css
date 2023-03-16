@@ -1,0 +1,13 @@
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--color-granite);
+  color: white;
+  padding: 1.5rem 0;
+  margin-top: 3.5rem;
+  align-self: flex-end;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
