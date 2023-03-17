@@ -1,5 +1,3 @@
-import { createListElement } from "./createListElement";
-
 export const setUpFormData = (event) => {
   event.preventDefault();
   let data = Object.fromEntries(new FormData(event.target));
@@ -10,5 +8,11 @@ export const setUpFormData = (event) => {
 
   let newdate = `${month.toUpperCase()} ${day}, ${year}`;
 
-  createListElement(data.input_head, data.input_text, newdate);
+  let obj = {
+    head: data.input_head,
+    text: data.input_text,
+    date: newdate,
+  };
+
+  return obj;
 };
