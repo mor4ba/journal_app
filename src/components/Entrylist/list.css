@@ -1,0 +1,41 @@
+.entries-section {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.entries-section__entries {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.entry__heading__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.entry {
+  text-align: left;
+  width: 100%;
+  padding: 1.5rem 0;
+  border-bottom: 2px solid var(--color-water-10);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+article.entry h2 {
+  font-style: bold;
+  padding-right: 2.5rem;
+}
+
+article.entry p {
+  padding-right: 2.5rem;
+}
+
+li.note div {
+  text-align: center;
+  font-weight: 600;
+}
