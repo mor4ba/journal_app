@@ -15,3 +15,60 @@ button {
 button:hover {
   background-color: var(--color-nemo-mid);
 }
+
+button.all,
+button.favourites {
+  background: transparent;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  color: var(--color-granite);
+}
+
+button.all span,
+button.favourites span {
+  background: var(--color-water-10);
+  border-radius: 16px;
+  font-size: 1rem;
+  padding: 0.25rem 0.8rem;
+  margin-left: 0.5rem;
+  position: relative;
+  bottom: 1px;
+}
+
+button.all.active,
+button.favourites.active {
+  color: var(--color-nemo);
+}
+
+button.all.active span,
+button.favourites.active span {
+  background: var(--color-nemo);
+  color: var(--color-foam);
+}
+
+.favorite-button {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 999px;
+  aspect-ratio: 1;
+  transition: background-color 0.2s ease-in-out;
+  background-color: transparent;
+  margin: -6px;
+  padding: 6px;
+}
+
+.favorite-button:hover {
+  background-color: var(--color-water);
+}
+
+.favorite-button:active {
+  background-color: var(--color-water-10);
+}
+
+button.tab {
+  background: transparent;
+  color: black;
+  border: none;
+}
