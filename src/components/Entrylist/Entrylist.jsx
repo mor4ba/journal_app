@@ -3,27 +3,35 @@ import Tab from "../Tabs/Tab";
 import Tabs from "../Tabs/Tabs";
 import Badge from "../Badge/Badge";
 
-export default function EntriesSection({ entries }) {
+export default function EntriesSection({
+  entries,
+  onToggleFavorite,
+  onShowFavoriteEntries,
+  onShowAllEntries,
+  favoriteEntriesCount,
+  allEntriesCount,
+}) {
   return (
     <section className="entries-section">
       <Tabs>
-        <Tab active>
-          All Entries <Badge isActive>3</Badge>
+        <Tab active event={onShowAllEntries}>
+          All Entries <Badge isActive>{allEntriesCount}</Badge>
         </Tab>
-        <Tab>
-          Favorites <Badge>1</Badge>
+        <Tab event={onShowFavoriteEntries}>
+          Favorites <Badge>{favoriteEntriesCount}</Badge>
         </Tab>
       </Tabs>
       <div className="entries-section__entries">
-        {entries.map((entry, index) => {
-          // console.log(entry);
-
+        {entries?.map((entry) => {
           return (
             <Entry
-              key={index}
+              key={entry.id}
+              id={entry.id}
               date={entry.date}
               notes={entry.text}
               heading={entry.head}
+              isFavorite={entry.isFavorite}
+              onToggleFavorite={onToggleFavorite}
             />
           );
         })}

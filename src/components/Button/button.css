@@ -63,10 +63,6 @@ button.favourites.active span {
   background-color: var(--color-water);
 }
 
-.favorite-button:active {
-  background-color: var(--color-water-10);
-}
-
 button.tab {
   background: transparent;
   color: black;

@@ -2,11 +2,12 @@ import "./Form.css";
 import Button from "../Button/button";
 import { setUpFormData } from "../functions/setUpFormData";
 import Label from "./Label";
+import { uid } from "uid";
 
 export default function Form({ setEntries, entry }) {
   function setUpEntryList(event) {
     const data = setUpFormData(event);
-    setEntries([...entry, data]);
+    setEntries([...entry, { ...data, id: uid() }]);
   }
 
   return (
