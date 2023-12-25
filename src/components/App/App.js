@@ -34,6 +34,10 @@ function App() {
     );
   }
 
+  function deleteEntry(id) {
+    setEntries((prevEntries) => prevEntries.filter((entry) => entry.id !== id));
+  }
+
   return (
     <Body>
       <Header />
@@ -47,9 +51,10 @@ function App() {
           onShowFavoriteEntries={handleShowFavoriteEntries}
           favoriteEntriesCount={favoriteEntries.length}
           allEntriesCount={entry.length}
+          deleteEntries={deleteEntry}
+          setEntries={setEntries}
         />
       </main>
-      <Footer />
     </Body>
   );
 }

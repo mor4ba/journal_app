@@ -1,14 +1,22 @@
 .entries-section {
   width: 100%;
   margin: 0 auto;
-  max-width: 500px;
 }
 
 .entries-section__entries {
   margin: 0 auto;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   width: 100%;
-  max-width: 500px;
+}
+
+.entry__content {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex-flow: wrap;
 }
 
 .entry__heading__container {
@@ -19,11 +27,12 @@
 
 article.entry {
   text-align: left;
-  width: 100%;
-  padding: 1.5rem 0;
-  border-bottom: 2px solid var(--color-water-10);
-  margin-bottom: 1rem;
+  padding: 0.75rem;
   position: relative;
+}
+
+article.entry:nth-of-type(odd) {
+  background: var(--color-water-10);
 }
 
 article.entry h2 {

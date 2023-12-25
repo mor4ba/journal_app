@@ -9,10 +9,11 @@ export const setUpFormData = (event) => {
   let newdate = `${month.toUpperCase()} ${day}, ${year}`;
 
   let obj = {
-    head: data.input_head,
-    text: data.input_text,
+    name: data.input_name,
+    armor: data.input_armor,
+    ini: data.input_ini,
     date: newdate,
-    isFavorite: false,
+    hp: data.input_hp,
   };
 
   return obj;

@@ -1,22 +1,68 @@
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 1rem;
   align-content: center;
   margin-bottom: 2.5rem;
   width: 100%;
   padding: 1rem;
-  max-width: 600px;
+  align-items: center;
+  justify-content: center;
+}
+
+.formFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.noteLine {
+  flex: 1 1 100%;
+  display: flex;
+}
+
+
+.noteLine textarea {
+  flex: 1 1 100%;
 }
 
 form textarea,
-form input {
-  padding: 1.5rem;
-  border: 2px solid var(--color-water-10);
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
+form input,
+input,
+textarea {
+  padding: 0.25rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  box-shadow: none;
   font-family: monospace;
+  background: transparent;
 }
 
-form label {
+form input:focus,
+input:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-left: 2px solid green;
+  border-bottom: 2px solid green;
+}
+
+form label,
+label {
   margin-bottom: 0.25rem;
+  font-family: monospace;
+  text-transform: lowercase;
+  margin-left: 0.25rem;
+}
+
+button[type="submit"] {
+  display: inline-flex;
+  align-content: center;
+  padding: 0.25rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
 }
