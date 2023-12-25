@@ -28,7 +28,7 @@ export default function Form({setEntries, entry}) {
             </div>
             <div className="formFieldWrapper">
 
-                <Label for="input_ini" name="input_ini" text="INI"/>
+                <Label for="input_ini" name="input_ini" text="initiative"/>
                 <input type="text" id="input_ini" name="input_ini"/>
             </div>
             <Button type="submit" disabled={false} text="Create"/>

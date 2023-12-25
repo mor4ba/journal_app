@@ -6,7 +6,8 @@ import Footer from "../Footer/Footer";
 import Entrylist from "../Entrylist/Entrylist";
 import useLocalStorageState from "use-local-storage-state";
 import { useState } from "react";
-
+import Timer from "../Body/Timer";
+import CountdownForm from "../Body/Timer";
 function App() {
   const [entry, setEntries] = useLocalStorageState("entry", {
     defaultValue: [],
@@ -54,6 +55,7 @@ function App() {
           deleteEntries={deleteEntry}
           setEntries={setEntries}
         />
+        <CountdownForm/>
       </main>
     </Body>
   );
