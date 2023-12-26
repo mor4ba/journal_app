@@ -15,8 +15,16 @@ const CheckboxControl = () => {
             );
         }
         return checkboxes;
-    };
 
+
+    };
+    const resetCheckboxes = () => {
+        const mainCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+        mainCheckboxes.forEach((checkbox) => (checkbox.checked = false));
+
+        const bonusCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+        bonusCheckboxes.forEach((checkbox) => (checkbox.checked = false));
+    };
     return (
         <div className={'actionWrapper'}>
                 <div className="formFieldWrapper">
@@ -42,6 +50,7 @@ const CheckboxControl = () => {
             <div className="formFieldWrapper actions">
             {renderCheckboxes(mainCheckboxCount, "Main")}
             {renderCheckboxes(bonusCheckboxCount, "Bonus")}
+                <button className="reset_actions" onClick={resetCheckboxes}>R</button>
             </div>
         </div>
     );

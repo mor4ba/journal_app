@@ -40,11 +40,6 @@ export default function Entry({
                     <button className="delete_entry" type="button" onClick={() => deleteEntries(id)}>X</button>
                     <FavoriteButton
                         id={uid()}
-                        name={'disadvantage'}
-                        className="enable_negative"
-                    />
-                    <FavoriteButton
-                        id={uid()}
                         name={'advantage'}
                         className="enable_positive"
                     />
@@ -52,6 +47,11 @@ export default function Entry({
                         id={uid()}
                         name={'stealth'}
                         className="enable_positive"
+                    />
+                    <FavoriteButton
+                        id={uid()}
+                        name={'disadvantage'}
+                        className="enable_negative"
                     />
                     <FavoriteButton
                         id={uid()}

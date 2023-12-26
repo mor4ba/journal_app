@@ -14,6 +14,11 @@ button {
   font-family: monospace;
 }
 
+button.reset_actions {
+  height: fit-content;
+  padding: 0.125rem 0.55rem;
+}
+
 .buttongroup {
   display: flex;
   flex-direction: row;
