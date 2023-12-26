@@ -1,6 +1,5 @@
 .entries-section {
-  width: 100%;
-  margin: 0 auto;
+  margin: 0 2rem 3.5rem;
 }
 
 .entries-section__entries {
@@ -9,7 +8,16 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 100%;
+}
+
+.actionWrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.actionWrapper .formFieldWrapper.actions {
+  flex-direction: row;
 }
 
 .entry__content {
@@ -17,6 +25,40 @@
   flex-direction: row;
   gap: 0.5rem;
   flex-flow: wrap;
+}
+
+.action_box {
+  display: inline-block;
+  position: relative;
+}
+
+.action_box input {
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+}
+
+.action_box span.icon {
+  width: 0px;
+  display: inline-block;
+  height: 0px;
+  -webkit-transform: rotate(360deg);
+  border-style: solid;
+  border-width: 0 15px 26.0px 15px;
+  border-color: transparent transparent orangered transparent;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.action_box.Main span.icon {
+  border-color: transparent transparent limegreen transparent;
+}
+
+.action_box input:checked ~ span.icon {
+  border-color: transparent transparent darkslategray transparent;
 }
 
 .entry__heading__container {
@@ -27,8 +69,16 @@
 
 article.entry {
   text-align: left;
-  padding: 0.75rem;
+  padding: 0.75rem 1.25rem;
   position: relative;
+  box-shadow:1px 2px 7px 2px lightgray;
+  transition: all 0.2s ease;
+}
+
+article.entry:hover,
+article.entry:focus,
+article.entry.active {
+  box-shadow:0px 0px 14px 1px lightgreen;
 }
 
 article.entry:nth-of-type(odd) {

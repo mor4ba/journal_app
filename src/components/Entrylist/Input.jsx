@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Input({ id, name, value, setEntries, entryId }) {
+export default function Input({ id, name, value, setEntries, entryId, type }) {
     const [inputValue, setInputValue] = useState(value);
 
     const handleInputChange = (e) => {
@@ -19,7 +19,7 @@ export default function Input({ id, name, value, setEntries, entryId }) {
 
     return (
         <input
-            type="text"
+            type={type}
             id={id}
             name={name}
             value={inputValue}

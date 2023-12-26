@@ -21,6 +21,7 @@ button {
   align-content: flex-start;
   align-items: center;
   justify-content: flex-start;
+  flex: 1 1 100%;
 }
 
 button.delete_entry {

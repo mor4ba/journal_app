@@ -4,4 +4,5 @@ header {
   justify-content: center;
   align-items: center;
   background: var(--color-water-10);
+  border-bottom: 1px solid black;
 }

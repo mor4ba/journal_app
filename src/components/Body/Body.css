@@ -6,9 +6,6 @@ main {
   align-items: center;
   padding: 0;
   margin: 0;
+  padding-bottom: 4rem;
   box-sizing: border-box;
-}
-
-main {
-  padding: 1rem;
 }
